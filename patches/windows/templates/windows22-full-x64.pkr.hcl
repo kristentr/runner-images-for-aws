@@ -408,7 +408,7 @@ build {
       # "${path.root}/../scripts/build/Install-DACFx.ps1",
       # "${path.root}/../scripts/build/Install-MysqlCli.ps1",
       "${path.root}/../scripts/build/Install-SQLPowerShellTools.ps1",
-      "${path.root}/../scripts/build/Install-SQLOLEDBDriver.ps1",
+      # "${path.root}/../scripts/build/Install-SQLOLEDBDriver.ps1",
       "${path.root}/../scripts/build/Install-DotnetSDK.ps1",
       "${path.root}/../scripts/build/Install-Mingw64.ps1",
       # "${path.root}/../scripts/build/Install-Haskell.ps1",
@@ -453,10 +453,14 @@ build {
     pause_before     = "2m0s"
     environment_vars = ["IMAGE_FOLDER=${var.image_folder}", "TEMP_DIR=${var.temp_dir}"]
     scripts          = [
-      "${path.root}/../scripts/build/Install-WindowsUpdatesAfterReboot.ps1",
+      # "${path.root}/../scripts/build/Install-WindowsUpdatesAfterReboot.ps1",
       "${path.root}/../scripts/build/Invoke-Cleanup.ps1",
       # "${path.root}/../scripts/tests/RunAll-Tests.ps1"
     ]
+  }
+
+  provisioner "powershell" {
+    inline = ["Remove-Item '${var.temp_dir}' -Recurse -Force -ErrorAction SilentlyContinue"]
   }
 
   // provisioner "powershell" {
@@ -539,8 +543,6 @@ build {
   provisioner "powershell" {
     valid_exit_codes = [0, 2]
     inline = [
-      "Write-Output 'Removing temp directory.'",
-      "Remove-Item -Recurse -Force ${var.temp_dir}",
       "Write-Output 'Disabling Windows Recovery Environment before Sysprep.'",
       "reagentc /disable",
       # "if( Test-Path $env:SystemRoot\\System32\\Sysprep\\unattend.xml ){ rm $env:SystemRoot\\System32\\Sysprep\\unattend.xml -Force}",

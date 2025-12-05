@@ -15,9 +15,9 @@
       "arch": "x64",
       "platform": "win32",
       "versions": [
-        "3.13.*"
+        "3.14.*"
       ],
-      "default": "3.13.*"
+      "default": "3.14.*"
     },
     {
       "name": "Python",
@@ -46,7 +46,6 @@
       "arch": "x64",
       "platform": "win32",
       "versions": [
-        "18.*",
         "20.*",
         "22.*",
         "24.*"
@@ -114,9 +113,9 @@
     ],
     "addons": [],
     "additional_tools": [
-      "cmake;3.18.1",
       "cmake;3.22.1",
-      "cmake;3.31.5"
+      "cmake;3.31.5",
+      "cmake;4.1.2"
     ],
     "ndk": {
       "default": "27",
@@ -297,7 +296,7 @@
   },
   "dotnet": {
     "versions": [
-      "9.0"
+      "10.0"
     ],
     "tools": [
       {

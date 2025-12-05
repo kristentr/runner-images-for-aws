@@ -21,7 +21,8 @@
                 "3.10.*",
                 "3.11.*",
                 "3.12.*",
-                "3.13.*"
+                "3.13.*",
+                "3.14.*"
             ],
             "default": "3.9.*"
         },
@@ -313,12 +314,12 @@
             "Component.MDD.Linux.GCC.arm"
         ],
         "vsix": [
-            "ProBITools.MicrosoftAnalysisServicesModelingProjects",
-            "SSIS.SqlServerIntegrationServicesProjects",
             "ProBITools.MicrosoftReportProjectsforVisualStudio",
             "VisualStudioClient.MicrosoftVisualStudio2017InstallerProjects",
             "ms-biztalk.BizTalk",
-            "WixToolset.WixToolsetVisualStudio2019Extension"
+            "WixToolset.WixToolsetVisualStudio2019Extension",
+            "ProBITools.MicrosoftAnalysisServicesModelingProjects",
+            "SSIS.SqlServerIntegrationServicesProjects"
         ]
     },
     "docker": {

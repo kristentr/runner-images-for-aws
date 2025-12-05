@@ -7,7 +7,7 @@
       "platform_version": "24.04",
       "arch": "x64",
       "versions": [
-        "3.13.*"
+        "3.14.*"
       ]
     },
     {
@@ -66,7 +66,8 @@
     ],
     "addon_list": [],
     "additional_tools": [
-      "cmake;3.31.5"
+      "cmake;3.31.5",
+      "cmake;4.1.2"
     ],
     "ndk": {
       "default": "27",
@@ -206,7 +207,7 @@
   ],
   "dotnet": {
     "versions": [
-      "9.0"
+      "10.0"
     ],
     "tools": [
       {
